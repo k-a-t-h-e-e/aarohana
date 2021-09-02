@@ -1,0 +1,214 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+html{
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(17, 12, 94);
+    background: linear-gradient(90deg, rgba(17, 12, 94, 1) 0%, rgba(11, 7, 78, 1) 11%, rgba(24, 19, 102, 1) 20%, rgba(22, 17, 91, 1) 35%, rgba(14, 8, 96, 1) 51%, rgba(19, 13, 89, 1) 62%, rgba(20, 15, 85, 1) 79%, rgba(16, 10, 92, 1) 90%, rgba(15, 12, 65, 1) 100%);
+    background-size: 400% 400%;
+    overflow-x: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 100% 400%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaler {
+    0% {
+        transform: scale(5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.googleform {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fade 1000ms 3550ms ease-in-out 1 forwards;
+}
+
+.googleform iframe {
+    margin: auto;
+    width: 98vw;
+    max-width: 600px;
+    height: 70vh;
+}
+
+.logo {
+    z-index: -1;
+    width: 100vw;
+    height: auto;
+}
+
+.logo>svg {
+    opacity: 0;
+    animation: fade 1300ms 1050ms ease-in-out 1 forwards, scaler 1300ms 1050ms ease-in-out 1 forwards;
+}
+
+.logo>svg:hover {
+    filter: drop-shadow();
+}
+
+.virtualMusicCompetition {
+    opacity: 0;
+    letter-spacing: 1vw;
+    animation: fade 900ms 2400ms ease-in-out 1 forwards, letterSpacing 900ms 2400ms ease-in-out 1 forwards;
+}
+
+@keyframes letterSpacing {
+    0% {
+        letter-spacing: 1vw;
+    }
+    100% {
+        letter-spacing: 0;
+    }
+}
+
+.st0 {
+    fill: white;
+}
+
+.header {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+.header>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tscLogo,
+.usjLogo {
+    margin: 10px;
+    width: 17vw;
+    height: 17vw;
+    max-width: 200px;
+    max-height: 200px;
+    opacity: 0;
+    animation: fade 500ms 600ms 1 ease-in-out forwards;
+}
+
+h1:nth-of-type(1) {
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    opacity: 0;
+    animation: fade 500ms 500ms 1 ease-in-out forwards;
+}
+
+h1:nth-of-type(2) {
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+    color: white;
+    font-size: 1.7vw;
+    text-align: center;
+    opacity: 0;
+    animation: fade 500ms 600ms 1 ease-in-out forwards;
+}
+
+@media screen and (max-width:350px) {
+    h1:nth-of-type(1) {
+        font-size: 2.3vw;
+    }
+    h1:nth-of-type(2) {
+        font-size: 1.4vw;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    h1:nth-of-type(1) {
+        font-size: 2.8vw;
+    }
+    h1:nth-of-type(2) {
+        font-size: 2.5vw;
+    }
+}
+
+.caption {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+    color: white;
+    font-size: 1vw;
+}
+
+.caption>* {
+    padding: 10px;
+}
+
+.virtualMusicCompetition {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: white;
+    font-size: max(1.4vw, 10px);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122, 153, 217)), color-stop(0.72, rgb(73, 125, 189)), color-stop(0.86, rgb(28, 58, 148)));
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.rulesBtn {
+    margin: 30px 0px;
+    padding: 16px;
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: black;
+    font-size: max(1.4vw, 12px);
+    border: 0px;
+    border-radius: 25px;
+    transition: 300ms background-color linear;
+    transition: 300ms color linear;
+    background-color: white;
+    opacity: 0;
+    animation: fade 1100ms 3450ms ease-in-out 1 forwards;
+}
+
+.rulesBtn:hover {
+    color: white;
+    background-color: rgb(11, 8, 43);
+}
