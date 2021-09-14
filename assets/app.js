@@ -36,11 +36,11 @@ const getPlaylist = () => {
         return response.json();
     })
     .then(data => {        
-        console.log(data.items);
+        
         const items=data.items;
         items.forEach((i)=>{
-            console.log(i?.snippet?.resourceId?.videoId);
-            listCreator(i?.snippet?.resourceId?.videoId);
+            
+            listCreator(i.snippet.resourceId.videoId);
 
     
         })

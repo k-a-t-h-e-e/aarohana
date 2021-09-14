@@ -238,10 +238,13 @@ body::-webkit-scrollbar-thumb {
 
 /* leaderboard */
 .leaderboard {
+    width: min(90vw,90vh);
     border-radius: 10px;
     box-shadow: 0px 0px 36px 18px rgb(0 0 0 / 47%);
     margin-top: -1350px;
     animation: marginAnimation 2000ms cubic-bezier(.49,.34,0,.9) 3s 1 forwards;
+    
+}
 }
 
 /* head */
@@ -253,7 +256,7 @@ body::-webkit-scrollbar-thumb {
 }
 .leaderboard .head h1 {
 	display: inline-block;
-	margin-left: 4px;
+	
 }
 
 /* body */
@@ -307,6 +310,13 @@ text-decoration: none;
 }
 
 
-.head h1{
-    font-size:max(1.4vw, 18px);
+.head{
+    font-size:min(1.4vw, 18px);
+    text-align: center;
+    width: 100%;
+  
+}
+.head h1 {
+    font-size:max(1.5vw, 18px);
+    padding: 2%;
 }
