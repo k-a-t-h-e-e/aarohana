@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 html{
 
@@ -44,17 +45,19 @@ body {
 
 .googleform {
     display: flex;
+    max-height: 100vh;
     align-items: center;
     margin-top: 40px;
     opacity: 0;
-    animation: fade 1000ms 3550ms ease-in-out 1 forwards;
+    animation: fade 1000ms 6550ms ease-in-out 1 forwards;
 }
 
 .googleform iframe {
     margin: auto;
     width: 98vw;
+    height: 100vh;
+    max-height: 1024px;
     max-width: 600px;
-    height: 70vh;
 }
 
 .logo {
@@ -137,7 +140,7 @@ h1:nth-of-type(2) {
 
 @media screen and (max-width:350px) {
     h1:nth-of-type(1) {
-        font-size: 2.3vw;
+        font-size: 2.4vw;
     }
     h1:nth-of-type(2) {
         font-size: 1.4vw;
@@ -211,4 +214,99 @@ body::-webkit-scrollbar-thumb {
 .rulesBtn:hover {
     color: white;
     background-color: rgb(11, 8, 43);
+}
+/* container */
+.lcontainer {
+	display: flex;
+    align-self: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    width: 100vw;    
+    height: auto;
+    border-radius: 10px;
+    
+    z-index: 1;
+    overflow: hidden;
+    
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 50px 0px;
+}
+
+
+/* leaderboard */
+.leaderboard {
+    border-radius: 10px;
+    box-shadow: 0px 0px 36px 18px rgb(0 0 0 / 47%);
+    margin-top: -1350px;
+    animation: marginAnimation 2000ms cubic-bezier(.49,.34,0,.9) 3s 1 forwards;
+}
+
+/* head */
+.leaderboard .head {
+	padding: 20px 16px;
+	color: snow;
+	font-size: 20px;
+	text-align: center;
+}
+.leaderboard .head h1 {
+	display: inline-block;
+	margin-left: 4px;
+}
+
+/* body */
+.lbody {
+	color: snow;
+	font-size: 16px;
+}
+.leaderboard ul {
+	counter-reset: number; 
+}
+.leaderboard li {
+	padding: 16px;
+	display: flex;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+    border-radius: 10px
+}
+.leaderboard li mark,small {
+	flex-grow: 1;
+	color: snow;
+	background-color: transparent;
+    max-width: 300px;
+}
+small{
+
+    text-align: right;
+}
+
+#headers1{
+	background: #fa6855;
+    pointer-events: none;
+    font-weight: bold;
+}
+li:hover{
+    transform: scale(1.1);    
+    
+    background-color: rgb(11, 7, 51);
+
+}
+@keyframes marginAnimation {
+    0%{
+        margin-top: -1350px;
+    }
+
+    100%{
+        margin-top: 0px;
+    }
+}
+a{
+text-decoration: none;
+}
+
+
+.head h1{
+    font-size:max(1.4vw, 18px);
 }
