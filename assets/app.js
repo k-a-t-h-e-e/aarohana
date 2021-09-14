@@ -1,4 +1,4 @@
-const youtubeKey = 'AIzaSyC-my0lqjMp9nv3Q3sTtvkXW6sbxCMUcYc';
+const youtubeKey = 'AIzaSyBWyResGF-DoPrIkDIM4HE0Um66V4aP22Y';
 const youtubeUser = 'UCOMZV9kTj3mrZgM8WehaB6A';
 const participantList = document.getElementById('participantList');
 

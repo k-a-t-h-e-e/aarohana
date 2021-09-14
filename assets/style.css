@@ -4,8 +4,8 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
-html{
 
+html {
     scroll-behavior: smooth;
 }
 
@@ -215,19 +215,20 @@ body::-webkit-scrollbar-thumb {
     color: white;
     background-color: rgb(11, 8, 43);
 }
+
+
 /* container */
+
 .lcontainer {
-	display: flex;
+    display: flex;
     align-self: center;
     align-items: center;
     font-family: 'Montserrat';
-    width: 100vw;    
+    width: 100vw;
     height: auto;
     border-radius: 10px;
-    
     z-index: 1;
     overflow: hidden;
-    
     justify-content: center;
     align-content: stretch;
     flex-wrap: wrap;
@@ -237,86 +238,92 @@ body::-webkit-scrollbar-thumb {
 
 
 /* leaderboard */
+
 .leaderboard {
-    width: min(90vw,90vh);
+    width: min(90vw, 90vh);
     border-radius: 10px;
     box-shadow: 0px 0px 36px 18px rgb(0 0 0 / 47%);
     margin-top: -1350px;
-    animation: marginAnimation 2000ms cubic-bezier(.49,.34,0,.9) 3s 1 forwards;
-    
+    animation: marginAnimation 2000ms cubic-bezier(.49, .34, 0, .9) 3s 1 forwards;
 }
-}
+
 
 /* head */
+
 .leaderboard .head {
-	padding: 20px 16px;
-	color: snow;
-	font-size: 20px;
-	text-align: center;
-}
-.leaderboard .head h1 {
-	display: inline-block;
-	
+    padding: 20px 16px;
+    color: snow;
+    font-size: 20px;
+    text-align: center;
 }
 
+.leaderboard .head h1 {
+    display: inline-block;
+}
+
+
 /* body */
+
 .lbody {
-	color: snow;
-	font-size: 16px;
+    color: snow;
+    font-size: 16px;
 }
+
 .leaderboard ul {
-	counter-reset: number; 
+    counter-reset: number;
 }
+
 .leaderboard li {
-	padding: 16px;
-	display: flex;
+    padding: 16px;
+    display: flex;
     transition: 500ms;
     transition-timing-function: ease-in-out;
     border-radius: 10px
 }
-.leaderboard li mark,small {
-	flex-grow: 1;
-	color: snow;
-	background-color: transparent;
+
+.leaderboard li mark,
+small {
+    flex-grow: 1;
+    color: snow;
+    background-color: transparent;
     max-width: 300px;
 }
-small{
 
+small {
     text-align: right;
 }
 
-#headers1{
-	background: #fa6855;
+#headers1 {
+    background: #fa6855;
     pointer-events: none;
     font-weight: bold;
 }
-li:hover{
-    transform: scale(1.1);    
-    
-    background-color: rgb(11, 7, 51);
 
+li:hover {
+    transform: scale(1.1);
+    background-color: rgb(11, 7, 51);
 }
+
 @keyframes marginAnimation {
-    0%{
+    0% {
         margin-top: -1350px;
     }
-
-    100%{
+    100% {
         margin-top: 0px;
     }
 }
-a{
-text-decoration: none;
+
+a {
+    text-decoration: none;
 }
 
-
-.head{
-    font-size:min(1.4vw, 18px);
+.head {
+    font-size: min(1.4vw, 18px);
     text-align: center;
     width: 100%;
-  
 }
+
 .head h1 {
-    font-size:max(1.5vw, 18px);
+    font-size: max(1.5vw, 18px);
     padding: 2%;
 }
